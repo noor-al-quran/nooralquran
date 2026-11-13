@@ -5,22 +5,17 @@ React + TypeScript + Vite + Tailwind CSS + Framer Motion + Lucide.
 ## التشغيل
 ```bash
 npm install
-npm run dev      # تشغيل محلي
-npm run build    # بناء للإنتاج (مجلد dist)
-npm run preview
+npm run dev
+npm run build
 ```
 
-## النشر على GitHub Pages
-1. ارفع المشروع إلى مستودع على GitHub (الفرع `main`).
-2. من Settings → Pages اختر Source: **GitHub Actions**.
-3. أي push يبني ويُنشر تلقائياً عبر `.github/workflows/deploy.yml` (يأخذ اسم المستودع تلقائياً).
-   للبناء المحلي بمسار مخصص: `VITE_BASE=/اسم-المستودع/ npm run build`.
+## الصفحات
+التنقل بالهاش (يعمل على GitHub Pages دون إعدادات): `#/quran` `#/reciters` `#/adhkar` `#/prayer` `#/qibla` `#/tasbih` `#/names` `#/hadith` `#/assistant` `#/calendar` `#/offline` `#/about` `#/gallery` `#/privacy` `#/developer`.
 
 ## التعديل
-- النصوص والمميزات والصور: `src/data.ts`
-- الأقسام: `src/components/`
-- الخصوصية: `src/components/PrivacyPage.tsx` (قالب قابل للتعديل)
-- الصور في `public/images`
+- نصوص الصفحات وصورها: `src/data.ts` (`PAGES` و`SHOTS`)
+- فهرس اللقطات: `SCREENSHOTS_CATALOG.md`
+- الصور المحسّنة: `public/images/shots/`
 
-## لاحقاً
-نظام التحميل (APK) غير مضاف عمداً؛ أضفه في المرحلة الثانية.
+## النشر
+GitHub Pages ← Source: GitHub Actions، ثم ملف `.github/workflows/pages-deploy.yml` (يأخذ اسم المستودع تلقائياً). لا يوجد نظام تحميل APK في هذه النسخة.
