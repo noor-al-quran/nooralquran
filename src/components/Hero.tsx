@@ -30,3 +30,6 @@ export default function Hero() {
         </motion.div>
       </div>
       <Skyline className="absolute inset-x-0 bottom-0 h-12 w-full text-emerald-deep/70" />
+    </section>
+  )
+}
