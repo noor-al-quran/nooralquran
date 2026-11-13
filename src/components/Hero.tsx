@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion'
-import { ChevronDown } from 'lucide-react'
+import { ChevronDown, Download } from 'lucide-react'
 import { Phone, Stars } from './ui'
 import { img } from '../data'
+
+const APK_URL = 'https://github.com/noor-al-quran/nooralquran/releases/latest/download/NoorAlQuran.apk'
 
 export default function Hero() {
   return (
@@ -15,9 +17,15 @@ export default function Hero() {
           <h1 className="mt-2 text-lg font-semibold text-glow">نور القرآن · Noor Al-Qur'an</h1>
           <h2 className="mt-4 text-4xl font-extrabold leading-snug md:text-5xl">رفيقك اليومي في رحلتك مع <span className="gold-text">القرآن الكريم</span></h2>
           <p className="mx-auto mt-5 max-w-xl text-lg leading-loose text-cream/75 lg:mx-0">تجربة إسلامية متكاملة تجمع القرآن الكريم والأذكار ومواقيت الصلاة واتجاه القبلة والمزيد، في تطبيق واحد صُمم ليكون رفيقك في يومك.</p>
-          <a href="#features" className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-gold to-gold-light px-8 py-3 font-bold text-emerald-deep shadow-lg transition hover:scale-105">
-            اكتشف التطبيق <ChevronDown size={18} />
-          </a>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <a href={APK_URL} className="inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-gold to-gold-light px-8 py-3 font-bold text-emerald-deep shadow-lg transition hover:scale-105">
+              <Download size={18} /> تحميل التطبيق
+            </a>
+            <a href="#features" className="inline-flex items-center gap-2 rounded-full border border-gold px-8 py-3 font-bold text-gold-light transition hover:bg-gold hover:text-emerald-deep">
+              اكتشف التطبيق <ChevronDown size={18} />
+            </a>
+          </div>
+          <p className="mt-3 text-sm text-cream/50">للأندرويد · ملف APK · 19.3 ميغابايت</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.9, delay: 0.2 }}>
           <Phone src={img('home.jpg')} alt="الشاشة الرئيسية لتطبيق نور القرآن" className="floaty" />
