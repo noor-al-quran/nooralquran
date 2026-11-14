@@ -12,8 +12,9 @@ import { TourProvider } from './tour/TourContext'
 import Welcome from './tour/Welcome'
 import TourOverlay from './tour/TourOverlay'
 import HowToButton from './tour/HowToButton'
+import InstallPage from './components/InstallPage'
 
-const TITLES: Record<string, string> = { gallery: 'معرض الصور', privacy: 'الخصوصية', developer: 'عن المطور' }
+const TITLES: Record<string, string> = { gallery: 'معرض الصور', install: 'كيف أحمل التطبيق', privacy: 'الخصوصية', developer: 'عن المطور' }
 
 export default function App() {
   const [hash, setHash] = useState(window.location.hash)
@@ -41,6 +42,7 @@ export default function App() {
 
   let page
   if (PAGES[route]) page = <FeaturePage k={route} />
+  else if (route === 'install') page = <InstallPage />
   else if (route === 'gallery') page = <GalleryPage />
   else if (route === 'privacy') page = <PrivacyPage />
   else if (route === 'developer') page = <DeveloperPage />

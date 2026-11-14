@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react'
-import { BookOpen, Headphones, Heart, Clock, Compass, CircleDot, Sparkles, ScrollText, CalendarDays, Bot, Info, CloudDownload } from 'lucide-react'
+import { BookOpen, Headphones, Heart, Clock, Compass, CircleDot, Sparkles, ScrollText, CalendarDays, Bot, Info, CloudDownload, Download } from 'lucide-react'
 
 export const img = (n: string) => `${import.meta.env.BASE_URL}images/${n}`
 
@@ -61,5 +61,5 @@ export const PAGES: Record<string, PageCfg> = {
 
 export const ROUTES: { key: string; label: string; icon?: LucideIcon }[] = [
   ...Object.entries(PAGES).map(([key, p]) => ({ key, label: p.label, icon: p.icon })),
-  { key: 'gallery', label: 'معرض الصور' }, { key: 'privacy', label: 'الخصوصية' }, { key: 'developer', label: 'عن المطور' },
+  { key: 'install', label: 'كيف أحمل التطبيق؟', icon: Download }, { key: 'gallery', label: 'معرض الصور' }, { key: 'privacy', label: 'الخصوصية' }, { key: 'developer', label: 'عن المطور' },
 ]
