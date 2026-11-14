@@ -8,7 +8,7 @@
 
 الموقع الرسمي لتطبيق نور القرآن للأندرويد
 
-[**🌐 زيارة الموقع**](https://noor-al-quran.github.io/nooralquran/) &nbsp;·&nbsp; [**⬇️ تحميل التطبيق**](https://github.com/noor-al-quran/nooralquran/releases/latest/download/NoorAlQuran.apk)
+[**🌐 زيارة الموقع**](https://noor-al-quran.github.io/nooralquran/) &nbsp;·&nbsp; [**⬇️ تحميل التطبيق**](https://github.com/noor-al-quran/nooralquran/releases/download/v1.0.0/NoorAlQuran.apk)
 
 ![React](https://img.shields.io/badge/React-18-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -155,7 +155,7 @@ VITE_BASE=/اسم-المستودع/ npm run build
 الرابط الثابت:
 
 ```text
-https://github.com/noor-al-quran/nooralquran/releases/latest/download/NoorAlQuran.apk
+https://github.com/noor-al-quran/nooralquran/releases/download/v1.0.0/NoorAlQuran.apk
 ```
 
 الرابط معرّف في `src/components/Hero.tsx` (الثابت `APK_URL`).
