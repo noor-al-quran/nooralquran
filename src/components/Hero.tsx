@@ -3,7 +3,7 @@ import { ChevronDown, Download } from 'lucide-react'
 import { Phone, Stars, Crescent, Lantern, Skyline } from './ui'
 import { img } from '../data'
 
-const APK_URL = 'https://github.com/noor-al-quran/nooralquran/releases/latest/download/NoorAlQuran.apk'
+const APK_URL = 'https://github.com/noor-al-quran/nooralquran/releases/download/v1.0.0/NoorAlQuran.apk'
 
 export default function Hero() {
   return (
