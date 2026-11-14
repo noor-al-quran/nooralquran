@@ -50,13 +50,13 @@ function Media({ step }: { step: Step }) {
     <>
       {!anyOk && step.illu && <Illu kind={step.illu} />}
       {imgs.length > 0 && (
-        <div className={anyOk ? 'mt-3 flex snap-x gap-3 overflow-x-auto pb-1' : 'hidden'}>
+        <div className={anyOk ? 'mt-3 space-y-4' : 'hidden'}>
           {imgs.map(i => status[i.file] === 'bad' ? null : (
-            <figure key={i.file} className={`w-[78%] shrink-0 snap-center sm:w-56 ${status[i.file] === 'ok' ? 'block' : 'hidden'}`}>
+            <figure key={i.file} className={status[i.file] === 'ok' ? 'block' : 'hidden'}>
               <img src={img(`download-guide/${i.file}`)} alt={i.caption} onClick={() => setZoom(i.file)}
                 onLoad={() => setStatus(s => ({ ...s, [i.file]: 'ok' }))} onError={() => setStatus(s => ({ ...s, [i.file]: 'bad' }))}
                 className="w-full cursor-zoom-in rounded-2xl border border-gold/40" />
-              <figcaption className="mt-1 text-center text-xs text-cream/70">{i.caption}</figcaption>
+              <figcaption className="mt-2 text-sm leading-relaxed text-cream/80">{i.caption}</figcaption>
             </figure>
           ))}
         </div>
@@ -83,6 +83,7 @@ function CardView({ step, ...nav }: P) {
         <button onClick={nav.onClose} aria-label="إغلاق" className="absolute left-4 top-4 z-10 rounded-full p-2 text-cream/60 hover:text-gold-light"><X size={20} /></button>
         <div className="relative z-10">
           {done && <img src={img('logo.jpg')} alt="شعار نور القرآن" width={80} height={80} className="mx-auto rounded-3xl border-2 border-gold/60 object-cover shadow-[0_0_50px_rgba(243,202,82,.5)]" style={{ width: 80, height: 80 }} />}
+          {step.tag && <span className="mb-2 inline-block rounded-full border border-gold/40 px-3 py-0.5 text-xs text-gold-light">{step.tag}</span>}
           <h2 className={`font-extrabold ${done ? 'gold-text mt-4 text-2xl' : 'mt-1 text-xl text-gold-light'}`}>{step.title}</h2>
           {step.shot && <div className="my-3"><Phone file={step.shot} zoom={false} className="max-w-[150px]" /></div>}
           <Media step={step} />
