@@ -11,3 +11,7 @@ body { margin: 0; background: #0A140F; color: #FAF7EE; font-family: 'Cairo', san
 .twinkle { animation: twinkle 4s ease-in-out infinite; }
 .floaty { animation: floaty 6s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .twinkle, .floaty { animation: none; } html { scroll-behavior: auto; } }
+
+@keyframes ring { 0%,100% { box-shadow: 0 0 0 0 rgba(243,202,82,.7), 0 0 24px rgba(243,202,82,.5) } 50% { box-shadow: 0 0 0 10px rgba(243,202,82,0), 0 0 34px rgba(243,202,82,.8) } }
+.tour-ring { animation: ring 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .tour-ring { animation: none; } }

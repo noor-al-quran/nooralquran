@@ -8,6 +8,10 @@ import { ZoomCtx } from './components/ui'
 import { Tour, Features, AboutTeaser, Teasers } from './components/Home'
 import { FeaturePage, GalleryPage, PrivacyPage, DeveloperPage } from './components/Pages'
 import { PAGES, SHOTS } from './data'
+import { TourProvider } from './tour/TourContext'
+import Welcome from './tour/Welcome'
+import TourOverlay from './tour/TourOverlay'
+import HowToButton from './tour/HowToButton'
 
 const TITLES: Record<string, string> = { gallery: 'معرض الصور', privacy: 'الخصوصية', developer: 'عن المطور' }
 
@@ -43,12 +47,17 @@ export default function App() {
   else page = <><Hero /><Tour /><Features /><AboutTeaser /><Teasers /></>
 
   return (
+    <TourProvider>
     <ZoomCtx.Provider value={open}>
       <Navbar />
       <main key={route}>{page}</main>
       <Footer />
       <Lightbox index={zoom} onChange={setZoom} />
+      <Welcome />
+      <TourOverlay />
+      <HowToButton />
       {showTop && <button aria-label="العودة إلى الأعلى" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="fixed bottom-5 left-5 z-50 rounded-full bg-gold p-3 text-emerald-deep shadow-lg transition hover:scale-110"><ArrowUp /></button>}
     </ZoomCtx.Provider>
+    </TourProvider>
   )
 }
