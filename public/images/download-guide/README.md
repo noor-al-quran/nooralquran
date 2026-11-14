@@ -1,14 +1,14 @@
 # صور دليل التحميل
 
-ضع هنا لقطات الشاشة (PNG) بهذه الأسماء بالضبط. الصورة غير الموجودة يستبدلها الموقع برسم توضيحي تلقائياً.
+لقطات حقيقية مقصوصة (الجزء المهم فقط) من هاتف أندرويد، وتظهر في الدليل التفاعلي وفي صفحة `#/install`.
 
-| الملف | الخطوة |
+| الملف | ما يعرضه |
 |---|---|
-| step-01-download.png | بدء التحميل |
-| step-02-download-complete.png | اكتمال التحميل |
-| step-03-open-downloads.png | فتح مجلد التنزيلات |
-| step-04-select-apk.png | اختيار ملف NoorAlQuran.apk |
-| step-05-install.png | شاشة التثبيت |
-| step-06-installed.png | اكتمال التثبيت |
+| step-01-download-again.png | نافذة «Download file again?» (تظهر إن حُمّل الملف من قبل) |
+| step-02-file-downloaded.png | رسالة «File downloaded» وزر Open |
+| step-03-downloads-list.png | ملف NoorAlQuran.apk في Downloads |
+| step-04-install.png | نافذة «Do you want to install this app?» |
+| step-05-play-protect.png | شاشة Google Play Protect وخيار Install without scanning |
+| step-06-installed.png | رسالة «App installed» وزر Open |
 
-لتغيير الأسماء أو الشرح أو الترتيب: `src/tour/steps.ts`.
+الشرح والترتيب: `src/tour/steps.ts`.
